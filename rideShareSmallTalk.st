@@ -1,4 +1,4 @@
-"Define the Ride class"
+"This is the base class which will be inherited by the derived classes or child classes"
 Object subclass: Ride [
     | rideID pickupLocation dropoffLocation distance |
 
@@ -23,7 +23,7 @@ Object subclass: Ride [
     ]
 ]
 
-"StandardRide class"
+"StandardRide subclass which is a derived class based on Ride"
 Ride subclass: StandardRide [
     fare [
         ^ distance * 1.5
@@ -34,7 +34,7 @@ Ride subclass: StandardRide [
     ]
 ]
 
-"PremiumRide class"
+"PremiumRide subclass which is a dericed class based on Ride"
 Ride subclass: PremiumRide [
     fare [
         ^ distance * 3
@@ -45,7 +45,7 @@ Ride subclass: PremiumRide [
     ]
 ]
 
-"Driver class"
+"Driver class which is the blueprint for driver objects"
 Object subclass: Driver [
     | driverID name rating assignedRides |
 
@@ -72,7 +72,7 @@ Object subclass: Driver [
 ]
 ]
 
-"Rider class"
+"Rider class which is the blueprint for rider objects"
 Object subclass: Rider [
     | riderID name requestedRides |
 
